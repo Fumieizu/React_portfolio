@@ -1,14 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
-import { theme } from '../commons/theme';
 
 export const GlobalStyles = createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
 
-    font-family: 'Montserrat', Verdana, Arial, sans-serif;
+    font-family: 'Source Sans Pro', Arial, sans-serif;
 
-    color: ${theme.colors.secondary};
+    color: ${(props) => props.theme.colors.white};
 
     text-align: center;
   }
@@ -22,6 +21,12 @@ export const GlobalStyles = createGlobalStyle`
     height: auto;
   }
 
+  h1,h2,h3,h4,h5,h6 {
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+  
   *,
   *::before,
   *::after {
