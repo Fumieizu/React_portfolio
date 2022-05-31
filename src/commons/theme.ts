@@ -20,5 +20,6 @@ export const theme: DefaultTheme = {
     l: '800px',
     m: '640px',
     s: '480px',
+    xs: '400px',
   },
 };

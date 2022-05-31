@@ -10,18 +10,19 @@ export const GlobalStyles = createGlobalStyle`
     color: ${(props) => props.theme.colors.white};
 
     text-align: center;
+    overflow: hidden;
   }
 
   a {
     text-decoration: none;
   }
-
+  
   img {
     max-width: 100%;
     height: auto;
   }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1,h2,h3,h4,h5,h6,p {
     padding: 0;
     margin: 0;
     display: inline-block;

@@ -13,10 +13,10 @@ export const StyledMainContainer = styled.section`
 
 export const StyledContainer = styled.div`
   border: 2px solid ${(props) => props.theme.colors.darkBlue};
-  color: ${(props) => props.theme.colors.white};
+  color: ${(props) => props.theme.colors.black};
   background-color: ${(props) => props.theme.colors.lightestBlue};
   padding: 2rem;
-  width: 30vw;
+  width: 50vw;
   height: 60vh;
   z-index: 3;
   cursor: pointer;
@@ -28,16 +28,72 @@ export const StyledContainer = styled.div`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.darkBlue};
+    color: ${(props) => props.theme.colors.white};
+
+    & path {
+      fill: ${(props) => props.theme.colors.white};
+    }
   }
 
-  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
-    width: 60vw;
+  svg {
+    min-width: 22px;
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.l}) {
     width: 50vw;
     height: max-content;
+    min-width: 275px;
   }
 `;
 
-export const StyledTitle = styled.h2``;
+export const StyledTitle = styled.h2`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  font-size: 1.7rem;
+
+  & > *:first-child {
+    margin-right: 1rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.s}) {
+    font-size: 1.1rem;
+  }
+`;
+
+export const StyledTextWrapper = styled.div`
+  font-size: 1.4rem;
+  padding: 0;
+  margin: 0.5rem 0;
+  text-align: left;
+
+  & > *:not(:first-child) {
+    margin-left: 2rem;
+    display: block;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+    font-size: 0.8rem;
+  }
+`;

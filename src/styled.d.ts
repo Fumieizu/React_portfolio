@@ -21,6 +21,7 @@ declare module 'styled-components' {
       l: string;
       m: string;
       s: string;
+      xs: string;
     };
   }
 }

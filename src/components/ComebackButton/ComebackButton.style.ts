@@ -9,6 +9,9 @@ export const StyledButton = styled(NavLink)`
   align-items: center;
   cursor: pointer;
   transition: transform ${(props) => props.theme.transitions.transitionDuration};
+  position: fixed;
+  left: 2rem;
+  top: 2rem;
 
   &:hover {
     transform: scale(1.2);
