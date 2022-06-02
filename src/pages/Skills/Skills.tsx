@@ -4,6 +4,7 @@ import { Title } from '../../components/Title';
 import { Socials } from '../../components/Socials';
 import { ComebackButton } from '../../components/ComebackButton';
 import { Particle } from '../../components/Particle';
+import { routeAnimation } from '../../commons/const';
 import {
   StyledMainContainer,
   StyledContainer,
@@ -13,9 +14,14 @@ import {
 
 export const Skills: React.FC = () => {
   return (
-    <StyledMainContainer>
-      <Particle mode={'light'} />
+    <StyledMainContainer
+      variants={routeAnimation}
+      initial={'initial'}
+      animate={'animate'}
+      exit={'exit'}
+    >
       <Title top={'80%'} right={'30%'} text={'Skills'} />
+      <Particle mode={'light'} />
       <ComebackButton />
       <StyledContainer>
         <StyledTitle>

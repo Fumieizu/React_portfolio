@@ -1,15 +1,4 @@
-interface IPageRoutes {
-  main: string;
-  skills: string;
-  about: string;
-  work: string;
-}
-
-interface ISocialsLinks {
-  GitHub: string;
-  Gmail: string;
-  Telegram: string;
-}
+import { IPageRoutes, ISocialsLinks } from './model';
 
 export const PageRoutes: IPageRoutes = {
   main: '/',
@@ -53,8 +42,8 @@ export const introImageAnimation = {
 };
 
 export const mainLinkAnimation = {
-  initial: (os: number) => ({
-    y: os,
+  initial: (custom: number) => ({
+    y: custom,
   }),
   animate: {
     y: 0,
@@ -91,5 +80,86 @@ export const socialsDecorateSpanAnimation = {
     type: 'spring',
     duration: 1,
     delay: 0.8,
+  },
+};
+
+export const WorkItemAnimation = {
+  initial: {
+    scale: 0,
+  },
+  animate: {
+    scale: 1,
+    transition: {
+      type: 'spring',
+      duration: 0.5,
+    },
+  },
+};
+
+export const WorkListAnimation = {
+  initial: { opacity: 0 },
+  animate: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      duration: 0.5,
+    },
+  },
+};
+
+export const routeAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+export const aboutRouteAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
+export const mainRouteAnimation = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+  },
+};
+
+export const aboutImageAnimation = {
+  initial: {
+    right: '-20%',
+    top: '100%',
+  },
+  animate: {
+    right: '5%',
+    top: '10%',
+    transition: { duration: 2, delay: 0.5 },
   },
 };

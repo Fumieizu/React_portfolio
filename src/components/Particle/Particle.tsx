@@ -10,7 +10,6 @@ export const Particle: React.FC<IParticle> = ({ mode }) => {
   const options = useMemo(() => (mode === 'light' ? lightConfig : darkConfig), [mode]);
 
   const particlesInit = useCallback(async (engine: Engine) => {
-    console.log(engine);
     await loadSlim(engine);
   }, []);
 

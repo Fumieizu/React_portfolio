@@ -6,7 +6,7 @@ export const StyledTitle = styled.h1<IStyledTitle>`
   top: ${(props) => props.top};
   right: ${(props) => props.right};
   left: ${(props) => props.left};
-  color: ${(props) => props.theme.colors.black};
+  color: ${(props) => props.color};
   opacity: 0.1;
   font-size: 9.5rem;
   z-index: 0;

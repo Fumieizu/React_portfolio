@@ -17,6 +17,10 @@ export const StyledButton = styled(NavLink)`
     transform: scale(1.2);
   }
 
+  &:active {
+    transform: scale(0.8);
+  }
+
   svg {
     pointer-events: none;
   }

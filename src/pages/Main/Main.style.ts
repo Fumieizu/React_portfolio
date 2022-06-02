@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { NavLink } from 'react-router-dom';
 import { IStyleBlueDiv, IStyledContainer, IStyledLinks } from './model';
 
-export const StyledMainContainer = styled.section`
+export const StyledMainContainer = styled(motion.section)`
   background-color: ${(props) => props.theme.colors.darkBlue};
   width: 100vw;
   height: 100vh;

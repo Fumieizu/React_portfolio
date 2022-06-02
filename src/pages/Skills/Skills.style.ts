@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const StyledMainContainer = styled.section`
+export const StyledMainContainer = styled(motion.section)`
   width: 100vw;
   height: 100vh;
   position: relative;

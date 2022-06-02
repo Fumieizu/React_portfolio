@@ -22,7 +22,6 @@ export const Intro: React.FC = () => {
     };
   }, []);
 
-  console.log(winWidth);
   const height = winWidth > LARGE_BREAKPOINT ? '55vh' : '70vh';
 
   return (
@@ -35,10 +34,10 @@ export const Intro: React.FC = () => {
     >
       <StyledContainer>
         <StyledTextWrapper>
-          <StyledText textAlign={'left'} fontSize={'4.5rem'}>
+          <StyledText textAlign={'left'} fontSize={'2em'}>
             Hi,
           </StyledText>
-          <StyledText textAlign={'left'} fontSize={'2.5rem'}>
+          <StyledText textAlign={'left'} fontSize={'1.17em'}>
             I&apos;m Dmitry.
           </StyledText>
           <StyledText textAlign={'left'} fontSize={'1.5rem'}>

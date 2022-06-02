@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ReactButton } from '../../components/ReactButton';
-import { mainLinkAnimation, PageRoutes } from '../../commons/const';
+import { mainLinkAnimation, mainRouteAnimation, PageRoutes } from '../../commons/const';
 import { Socials } from '../../components/Socials';
 import { LogoIcon } from '../../assets/icons';
 import { Intro } from '../../components/Intro';
@@ -15,13 +15,31 @@ import {
 
 export const Main: React.FC = () => {
   const [isClick, setIsClick] = useState<boolean>(false);
+  const [pathname, setPathname] = useState<string>('');
+
+  const handleLinkClick = (path: string) => {
+    setPathname(path);
+  };
 
   const handleMainButtonClick = () => {
     setIsClick((prevState) => !prevState);
   };
 
+  const moveY = {
+    y: '-100%',
+  };
+  const moveX = {
+    x: `${pathname === 'work' ? '100%' : '-100%'}`,
+  };
+
   return (
-    <StyledMainContainer>
+    <StyledMainContainer
+      variants={mainRouteAnimation}
+      initial={'initial'}
+      animate={'animate'}
+      exit={pathname === 'about' ? moveY : moveX}
+      transition={{ duration: 0.5 }}
+    >
       <StyledBlueDiv isClick={isClick} />
       <StyledLogoContainer
         variants={mainLinkAnimation}
@@ -34,7 +52,7 @@ export const Main: React.FC = () => {
       </StyledLogoContainer>
       <ReactButton onClick={handleMainButtonClick} isClick={isClick} />
       <StyledContainer justifyContent={'space-between'} alignItems={'center'}>
-        <StyledLinks to={PageRoutes.work} rotate={'-90deg'}>
+        <StyledLinks onClick={() => handleLinkClick('work')} to={PageRoutes.work} rotate={'-90deg'}>
           <StyledTitle
             variants={mainLinkAnimation}
             custom={-200}
@@ -45,7 +63,11 @@ export const Main: React.FC = () => {
             Work
           </StyledTitle>
         </StyledLinks>
-        <StyledLinks to={PageRoutes.skills} rotate={'90deg'}>
+        <StyledLinks
+          onClick={() => handleLinkClick('skills')}
+          to={PageRoutes.skills}
+          rotate={'90deg'}
+        >
           <StyledTitle
             variants={mainLinkAnimation}
             custom={-200}
@@ -59,7 +81,7 @@ export const Main: React.FC = () => {
       </StyledContainer>
       <StyledContainer justifyContent={'center'} alignItems={'flex-end'}>
         <Socials />
-        <StyledLinks to={PageRoutes.about} rotate={''}>
+        <StyledLinks onClick={() => handleLinkClick('about')} to={PageRoutes.about} rotate={''}>
           <StyledTitle
             variants={mainLinkAnimation}
             custom={200}

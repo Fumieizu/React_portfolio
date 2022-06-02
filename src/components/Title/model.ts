@@ -3,6 +3,7 @@ export interface ITitle {
   top?: string;
   right?: string;
   left?: string;
+  color?: string;
 }
 
 export interface IStyledTitle {

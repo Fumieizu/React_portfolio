@@ -7,7 +7,6 @@ export const StyledWrapper = styled(motion.div)`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
   width: 55vw;
   display: flex;
   background: linear-gradient(
@@ -88,10 +87,15 @@ export const StyledTextWrapper = styled.div`
   justify-content: space-evenly;
   padding: 2rem;
   color: ${(props) => props.theme.colors.darkBlue};
+  font-size: calc(1rem + 1.5vw);
 
   & > *:last-child {
     opacity: 0.6;
     font-weight: 300;
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.xxs}) {
+    padding: 1rem;
   }
 `;
 
@@ -102,4 +106,14 @@ export const StyledText = styled.p<IStyledText>`
   font-weight: 600;
   text-align: ${(props) => props.textAlign};
   font-size: ${(props) => props.fontSize};
+
+  & > *:last-child {
+    font-size: calc(0.5rem + 1.5vw);
+  }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.m}) {
+    & > *:last-child {
+      font-size: calc(0.5rem + 1vw);
+    }
+  }
 `;

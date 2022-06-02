@@ -21,5 +21,6 @@ export const theme: DefaultTheme = {
     m: '640px',
     s: '480px',
     xs: '400px',
+    xxs: '320px',
   },
 };
