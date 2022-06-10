@@ -1,0 +1,84 @@
+{
+  "main": {
+    "title": "Привет,",
+    "name": "Меня зовут Дмитрий.",
+    "subtitle": "Я Front-end разработчик",
+    "work": "Работы",
+    "skills": "Мои навыки",
+    "about": "Обо мне",
+    "click": "Нажми"
+  },
+  "skills": {
+    "title": "Я слежу за тенденциями и соответствую им"
+  },
+  "about": [
+    "Я front-end разработчик из России. Я люблю создавать современные, сложные приложения с использованием современных технологий.",
+    "Я слежу за трендами и стараюсь соответствовать им. Я думаю, что изучать что-то новое - это весело, и использовать это в проектах необходимо для развития ваших навыков.",
+    "Чистота и производительность кода также очень важны для меня. И этого можно достичь, следуя лучшим практикам. Вы можете связаться со мной через социальные ссылки."
+  ],
+  "works": [
+    {
+      "name": "Six-cities",
+      "description": "Это приложение для бронирования. C использованием React, Redux. Также проект был покрыт тестами на Jest и React-testing-library.",
+      "tags": ["React", "Redux-tool-kit", "Axios", "Leaflet", "Jest", "React-testing-library"],
+      "demo": "https://six-cities-self.vercel.app/",
+      "github": "https://github.com/Fumieizu/1424419-six-cities-7"
+    },
+    {
+      "name": "GuitarShop",
+      "description": "Это каталог интернет магазина с фильтрами, нумерацией страниц и корзиной с промо-кодом.  С использованием React, Redux, Scss.",
+      "tags": ["React", "Redux-tool-kit", "Scss", "Reselect"],
+      "demo": "https://suvernev-guitar-shop.vercel.app/",
+      "github": "https://github.com/Fumieizu/suvernev_GuitarShop"
+    },
+    {
+      "name": "Liga-bank Calculator",
+      "description": "Приложение для расчет кредита на автомобиль или квартиру. Приложение было создано с использованием React, Scss, Leaflet.",
+      "tags": ["React", "Scss", "Leaflet"],
+      "demo": "https://suvernev-ligabank2.vercel.app/",
+      "github": "https://github.com/Fumieizu/suvernev_ligabank2"
+    },
+    {
+      "name": "Liga-bank Exchanger",
+      "description": "Простое приложение для обмена валюты с Api. Были использованы React, Redux, Scss, Reselect.",
+      "tags": ["React", "Redux-tool-kit", "Scss", "Reselect"],
+      "demo": "https://suvernev-ligabank.vercel.app/",
+      "github": "https://github.com/Fumieizu/Suvernev_ligabank"
+    },
+    {
+      "name": "Auto-moto",
+      "description": "Сайт визитка автомобиля с нативным слайдером, отзывами и картой. С использованием React, Ssss.",
+      "tags": ["React, Scss"],
+      "demo": "https://suvernev-avto-moto.vercel.app/",
+      "github": "https://github.com/Fumieizu/suvernev_avto-moto"
+    },
+    {
+      "name": "Cinemaddict",
+      "description": "Это брошюра о фильмах с несколькими фильтрами и статистикой просмотренных фильмов в Chart JS. Используется Vanilla JS, паттерн MVC, Service-Workers",
+      "tags": ["Js", "MVP", "SW"],
+      "demo": "https://cinemaddict-ten.vercel.app/",
+      "github": "https://github.com/Fumieizu/1424419-cinemaddict-14"
+    },
+    {
+      "name": "Keksobooking",
+      "description": "Это простое приложение для бронирования отелей на vanilla JS с картой на Leaflet.",
+      "tags": ["Js", "Leaflet"],
+      "demo": "https://fumieizu.github.io/1424419-keksobooking-22/",
+      "github": "https://github.com/Fumieizu/1424419-keksobooking-22"
+    },
+    {
+      "name": "Mishka",
+      "description": "Это магазин мягких игрушек из нескольких страницах. С  использованием Html, Css, Js, Gulp.",
+      "tags": ["Html", "Scss", "Js", "Gulp"],
+      "demo": "https://fumieizu.github.io/1424419-mishka-21/",
+      "github": "https://github.com/Fumieizu/1424419-mishka-21"
+    },
+    {
+      "name": "Gllacy",
+      "description": "Лендинг магазина мороженого с несколькими страницами. С использованием Html, Css.",
+      "tags": ["Html", "Css"],
+      "demo": "https://fumieizu.github.io/1424419-gllacy-29/",
+      "github": "https://github.com/Fumieizu/1424419-gllacy-29"
+    }
+  ]
+}

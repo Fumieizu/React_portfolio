@@ -12,6 +12,10 @@ export const StyledMainContainer = styled(motion.section)`
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   overflow: hidden;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-bottom: 2rem;
+  }
 `;
 
 export const StyledContainer = styled.div<IStyledContainer>`

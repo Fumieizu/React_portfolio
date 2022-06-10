@@ -106,13 +106,14 @@ export const StyledText = styled.p<IStyledText>`
   font-weight: 600;
   text-align: ${(props) => props.textAlign};
   font-size: ${(props) => props.fontSize};
+  width: 100%;
 
-  & > *:last-child {
+  &:last-child {
     font-size: calc(0.5rem + 1.5vw);
   }
 
   @media (max-width: ${(props) => props.theme.breakpoints.m}) {
-    & > *:last-child {
+    &:last-child {
       font-size: calc(0.5rem + 1vw);
     }
   }

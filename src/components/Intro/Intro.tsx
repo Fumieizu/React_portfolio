@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Pepe from '../../assets/images/pepe.png';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 import { introAnimation, introImageAnimation } from '../../commons/const';
 import { StyledWrapper, StyledContainer, StyledTextWrapper, StyledText } from './Intro.style';
 
@@ -8,6 +9,7 @@ const LARGE_BREAKPOINT = 800;
 
 export const Intro: React.FC = () => {
   const [winWidth, setWinWidth] = useState<number>(0);
+  const { t, i18n } = useTranslation();
 
   const detectResizeWindow = () => {
     setWinWidth(window.innerWidth);
@@ -34,14 +36,14 @@ export const Intro: React.FC = () => {
     >
       <StyledContainer>
         <StyledTextWrapper>
-          <StyledText textAlign={'left'} fontSize={'2em'}>
-            Hi,
+          <StyledText textAlign={'left'} fontSize={i18n.language === 'en' ? '2em' : '1.5em'}>
+            {t('main.title')}
           </StyledText>
-          <StyledText textAlign={'left'} fontSize={'1.17em'}>
-            I&apos;m Dmitry.
+          <StyledText textAlign={'left'} fontSize={i18n.language === 'en' ? '1.17em' : '1em'}>
+            {t('main.name')}
           </StyledText>
           <StyledText textAlign={'left'} fontSize={'1.5rem'}>
-            Front-end developer
+            {t('main.subtitle')}
           </StyledText>
         </StyledTextWrapper>
       </StyledContainer>

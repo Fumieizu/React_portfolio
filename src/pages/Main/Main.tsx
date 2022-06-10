@@ -4,6 +4,8 @@ import { mainLinkAnimation, mainRouteAnimation, PageRoutes } from '../../commons
 import { Socials } from '../../components/Socials';
 import { LogoIcon } from '../../assets/icons';
 import { Intro } from '../../components/Intro';
+import { LangSwitcher } from '../../components/LangSwitcher';
+import { useTranslation } from 'react-i18next';
 import {
   StyledMainContainer,
   StyledContainer,
@@ -16,6 +18,7 @@ import {
 export const Main: React.FC = () => {
   const [isClick, setIsClick] = useState<boolean>(false);
   const [pathname, setPathname] = useState<string>('');
+  const { t } = useTranslation();
 
   const handleLinkClick = (path: string) => {
     setPathname(path);
@@ -50,6 +53,7 @@ export const Main: React.FC = () => {
       >
         <LogoIcon width={'60px'} height={'32px'} />
       </StyledLogoContainer>
+      <LangSwitcher isMain={true} />
       <ReactButton onClick={handleMainButtonClick} isClick={isClick} />
       <StyledContainer justifyContent={'space-between'} alignItems={'center'}>
         <StyledLinks onClick={() => handleLinkClick('work')} to={PageRoutes.work} rotate={'-90deg'}>
@@ -60,7 +64,7 @@ export const Main: React.FC = () => {
             animate={'animate'}
             transition={mainLinkAnimation.transition}
           >
-            Work
+            {t('main.work')}
           </StyledTitle>
         </StyledLinks>
         <StyledLinks
@@ -75,7 +79,7 @@ export const Main: React.FC = () => {
             animate={'animate'}
             transition={mainLinkAnimation.transition}
           >
-            My Skills
+            {t('main.skills')}
           </StyledTitle>
         </StyledLinks>
       </StyledContainer>
@@ -89,7 +93,7 @@ export const Main: React.FC = () => {
             animate={'animate'}
             transition={mainLinkAnimation.transition}
           >
-            About
+            {t('main.about')}
           </StyledTitle>
         </StyledLinks>
       </StyledContainer>

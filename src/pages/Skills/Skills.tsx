@@ -5,6 +5,8 @@ import { Socials } from '../../components/Socials';
 import { ComebackButton } from '../../components/ComebackButton';
 import { Particle } from '../../components/Particle';
 import { routeAnimation } from '../../commons/const';
+import { useTranslation } from 'react-i18next';
+import { LangSwitcher } from '../../components/LangSwitcher';
 import {
   StyledMainContainer,
   StyledContainer,
@@ -13,6 +15,8 @@ import {
 } from './Skills.style';
 
 export const Skills: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <StyledMainContainer
       variants={routeAnimation}
@@ -23,12 +27,13 @@ export const Skills: React.FC = () => {
       <Title top={'80%'} right={'30%'} text={'Skills'} />
       <Particle mode={'light'} />
       <ComebackButton />
+      <LangSwitcher />
       <StyledContainer>
         <StyledTitle>
           <LaptopIcon /> Front-end developer
         </StyledTitle>
         <StyledTextWrapper>
-          <p>I follow trends and match them</p>
+          <p>{t('skills.title')}</p>
         </StyledTextWrapper>
         <StyledTextWrapper>
           <strong>SKILLS</strong>
