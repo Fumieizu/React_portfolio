@@ -12,7 +12,7 @@ export const StyledMainContainer = styled(motion.section)`
   background-color: ${(props) => props.theme.colors.lightestBlue};
 `;
 
-export const StyledContainer = styled.div`
+export const StyledContainer = styled.a`
   border: 2px solid ${(props) => props.theme.colors.darkBlue};
   color: ${(props) => props.theme.colors.black};
   background-color: ${(props) => props.theme.colors.lightestBlue};
@@ -26,6 +26,7 @@ export const StyledContainer = styled.div`
   justify-content: space-between;
   font-family: 'Ubuntu Mono', Arial, monospace;
   line-height: 1.5;
+  transition: ${(props) => props.theme.transitions.transitionDuration};
 
   &:hover {
     background-color: ${(props) => props.theme.colors.darkBlue};
@@ -40,7 +41,7 @@ export const StyledContainer = styled.div`
     min-width: 22px;
   }
 
-  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+  @media (max-width: ${(props) => props.theme.breakpoints.xl}) {
     width: 50vw;
     height: max-content;
     min-width: 275px;

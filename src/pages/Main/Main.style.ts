@@ -12,6 +12,10 @@ export const StyledMainContainer = styled(motion.section)`
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   overflow: hidden;
+
+  @media (max-width: ${(props) => props.theme.breakpoints.l}) {
+    padding-bottom: 2rem;
+  }
 `;
 
 export const StyledContainer = styled.div<IStyledContainer>`
@@ -37,12 +41,20 @@ export const StyledLinks = styled(NavLink)<IStyledLinks>`
   &:active {
     transform: ${(props) => (props.rotate ? `rotate(${props.rotate}) scale(0.8)` : 'scale(0.8)')};
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+    &[href='/skills'] {
+      position: relative;
+      right: -30px;
+    }
+  }
 `;
 
 export const StyledLogoContainer = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   padding-right: 1rem;
+  z-index: 3;
 `;
 
 export const StyledTitle = styled(motion.h2)`
