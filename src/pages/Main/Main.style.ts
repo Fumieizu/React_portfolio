@@ -41,12 +41,20 @@ export const StyledLinks = styled(NavLink)<IStyledLinks>`
   &:active {
     transform: ${(props) => (props.rotate ? `rotate(${props.rotate}) scale(0.8)` : 'scale(0.8)')};
   }
+
+  @media (max-width: ${(props) => props.theme.breakpoints.xs}) {
+    &[href='/skills'] {
+      position: relative;
+      right: -30px;
+    }
+  }
 `;
 
 export const StyledLogoContainer = styled(motion.div)`
   display: flex;
   justify-content: flex-end;
   padding-right: 1rem;
+  z-index: 3;
 `;
 
 export const StyledTitle = styled(motion.h2)`

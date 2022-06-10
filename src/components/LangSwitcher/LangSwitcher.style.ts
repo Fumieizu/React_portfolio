@@ -3,10 +3,10 @@ import { IStyledButton, ILangSwitcher } from './model';
 
 export const StyledMainContainer = styled.div<ILangSwitcher>`
   position: fixed;
-  left: 2rem;
-  top: ${(props) => (props.isMain ? '2rem' : '5rem')};
+  left: ${(props) => (props.isMain ? '2rem' : '7rem')};
+  top: 1.5rem;
   display: flex;
-  z-index: 2;
+  z-index: 4;
 `;
 
 export const StyledButton = styled.button<IStyledButton>`

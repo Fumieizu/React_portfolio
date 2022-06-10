@@ -19,9 +19,11 @@
     "sourceType": "module"
   },
   "plugins": ["react", "import", "@typescript-eslint", "react-hooks", "prettier"],
-  "rules": {
-  },
+  "rules": {},
   "settings": {
+    "react": {
+      "version": "detect"
+    },
     "import/extensions": [".ts", ".tsx"]
   }
 }

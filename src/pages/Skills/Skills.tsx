@@ -28,7 +28,8 @@ export const Skills: React.FC = () => {
       <Particle mode={'light'} />
       <ComebackButton />
       <LangSwitcher />
-      <StyledContainer>
+      <StyledContainer href="#">
+        {/*TODO add CV link(/w rel="noreferrer" target="_blank)*/}
         <StyledTitle>
           <LaptopIcon /> Front-end developer
         </StyledTitle>
